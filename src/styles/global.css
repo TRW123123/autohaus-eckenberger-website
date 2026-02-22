@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1B2A4A;
+  --color-orange: #E8860C;
+  --color-cream: #F5F5F0;
+  --color-charcoal: #1A1A1A;
+}
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}

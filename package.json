@@ -1,0 +1,18 @@
+{
+  "name": "autohaus-eckenberger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@astrojs/netlify": "^6.6.4",
+    "@tailwindcss/vite": "^4.2.0",
+    "astro": "^5.17.3",
+    "tailwindcss": "^4.2.0"
+  }
+}
