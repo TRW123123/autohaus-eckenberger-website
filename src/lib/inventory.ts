@@ -28,9 +28,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: 'Neu',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Ducato+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Ducato+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Ducato+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
         ],
         category: 'nutz',
         features: ['Klimaanlage', 'Rückfahrkamera', 'Tempomat', 'Trennwand'],
@@ -48,9 +48,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '09/2021',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Peugeot+Boxer+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Peugeot+Boxer+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Peugeot+Boxer+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
         ],
         category: 'nutz',
         features: ['Einparkhilfe', 'Sitzheizung', 'Bluetooth', 'Anhängerkupplung'],
@@ -68,9 +68,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '05/2021',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Citroën+Jumper+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Citroën+Jumper+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Citroën+Jumper+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
         ],
         category: 'nutz',
         features: ['Radio/CD', 'Zentralverriegelung', 'Servolenkung'],
@@ -88,9 +88,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: 'Neu',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=MB+Sprinter+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=MB+Sprinter+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=MB+Sprinter+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
         ],
         category: 'nutz',
         features: ['MBUX', 'Multifunktionslenkrad', 'Seitenwind-Assistent'],
@@ -108,9 +108,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '04/2021',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Transporter+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Transporter+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Transporter+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
         ],
         category: 'nutz',
         features: ['Klima', 'Trennwand mit Fenster', 'Holzboden'],
@@ -128,9 +128,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Automatik',
         firstRegistration: 'Neu',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Doppelkabine+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Doppelkabine+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Doppelkabine+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
         ],
         category: 'nutz',
         features: ['Automatik', 'Navi', '7 Sitze', 'Pritsche'],
@@ -148,9 +148,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '10/2024',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/800px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/800px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/800px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg'
         ],
         category: 'pkw',
         features: ['Virtual Cockpit', 'Matrix LED', 'Bang & Olufsen'],
@@ -168,9 +168,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Automatik',
         firstRegistration: '05/2023',
         images: [
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman+-+Ansicht+1',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman+-+Ansicht+2',
-            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman+-+Ansicht+3'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/800px-Mercedes-Benz_G_350_d_%28W_463%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/800px-Mercedes-Benz_G_350_d_%28W_463%29.jpg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/800px-Mercedes-Benz_G_350_d_%28W_463%29.jpg'
         ],
         category: 'quad',
         features: ['Allrad', 'Servolenkung', 'Seilwinde', 'Gepäckträger'],
