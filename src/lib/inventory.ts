@@ -28,9 +28,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: 'Neu',
         images: [
-            'https://images.unsplash.com/photo-1600320844678-430930335099?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Ducato+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Ducato+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Ducato+-+Ansicht+3'
         ],
         category: 'nutz',
         features: ['Klimaanlage', 'Rückfahrkamera', 'Tempomat', 'Trennwand'],
@@ -48,9 +48,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '09/2021',
         images: [
-            'https://images.unsplash.com/photo-1517524008436-bbdb53951433?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Peugeot+Boxer+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Peugeot+Boxer+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Peugeot+Boxer+-+Ansicht+3'
         ],
         category: 'nutz',
         features: ['Einparkhilfe', 'Sitzheizung', 'Bluetooth', 'Anhängerkupplung'],
@@ -68,9 +68,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '05/2021',
         images: [
-            'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600320844678-430930335099?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Citroën+Jumper+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Citroën+Jumper+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Citroën+Jumper+-+Ansicht+3'
         ],
         category: 'nutz',
         features: ['Radio/CD', 'Zentralverriegelung', 'Servolenkung'],
@@ -88,9 +88,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: 'Neu',
         images: [
-            'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1517524008436-bbdb53951433?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=MB+Sprinter+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=MB+Sprinter+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=MB+Sprinter+-+Ansicht+3'
         ],
         category: 'nutz',
         features: ['MBUX', 'Multifunktionslenkrad', 'Seitenwind-Assistent'],
@@ -108,9 +108,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '04/2021',
         images: [
-            'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600320844678-430930335099?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Transporter+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Transporter+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Transporter+-+Ansicht+3'
         ],
         category: 'nutz',
         features: ['Klima', 'Trennwand mit Fenster', 'Holzboden'],
@@ -128,9 +128,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Automatik',
         firstRegistration: 'Neu',
         images: [
-            'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1517524008436-bbdb53951433?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Doppelkabine+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Doppelkabine+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Fiat+Doppelkabine+-+Ansicht+3'
         ],
         category: 'nutz',
         features: ['Automatik', 'Navi', '7 Sitze', 'Pritsche'],
@@ -148,9 +148,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '10/2024',
         images: [
-            'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600320844678-430930335099?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+-+Ansicht+3'
         ],
         category: 'pkw',
         features: ['Virtual Cockpit', 'Matrix LED', 'Bang & Olufsen'],
@@ -168,9 +168,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Automatik',
         firstRegistration: '05/2023',
         images: [
-            'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1517524008436-bbdb53951433?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800'
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman+-+Ansicht+1',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman+-+Ansicht+2',
+            'https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman+-+Ansicht+3'
         ],
         category: 'quad',
         features: ['Allrad', 'Servolenkung', 'Seilwinde', 'Gepäckträger'],
