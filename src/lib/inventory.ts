@@ -27,7 +27,7 @@ export const DEMO_CARS: Car[] = [
         powerUnit: 'PS',
         transmission: 'Automatik',
         firstRegistration: '06/2022',
-        images: ['https://images.unsplash.com/photo-1600320844678-430930335099?auto=format&fit=crop&q=80&w=800'],
+        images: ['https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Mercedes+Sprinter'],
         category: 'nutz',
         features: ['Klimaanlage', 'Rückfahrkamera', 'MBUX Multimediasystem', 'Tempomat', 'Trennwand'],
         description: 'Sehr gepflegter Sprinter aus 1. Hand. Ideal für Kurierdienste oder als Basis für einen Camper-Ausbau.'
@@ -43,7 +43,7 @@ export const DEMO_CARS: Car[] = [
         powerUnit: 'PS',
         transmission: 'Schaltgetriebe',
         firstRegistration: '03/2021',
-        images: ['https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&q=80&w=800'],
+        images: ['https://placehold.co/800x500/F3F3F3/545557?font=inter&text=VW+Crafter'],
         category: 'nutz',
         features: ['Einparkhilfe', 'Sitzheizung', 'Bluetooth', 'Anhängerkupplung'],
         description: 'Zuverlässiger Crafter mit Hochdach. Scheckheftgepflegt bei VW.'
@@ -59,7 +59,7 @@ export const DEMO_CARS: Car[] = [
         powerUnit: 'PS',
         transmission: 'Automatik',
         firstRegistration: '09/2020',
-        images: ['https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800'],
+        images: ['https://placehold.co/800x500/F3F3F3/545557?font=inter&text=BMW+530d'],
         category: 'pkw',
         features: ['Leder', 'Navi Professional', 'LED-Scheinwerfer', 'Head-Up Display', 'M-Sport'],
         description: 'Top ausgestatteter 5er BMW in Carbonschwarz. Unfallfrei und sehr gepflegt.'
@@ -75,7 +75,7 @@ export const DEMO_CARS: Car[] = [
         powerUnit: 'PS',
         transmission: 'Automatik',
         firstRegistration: '05/2023',
-        images: ['https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800'],
+        images: ['https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Polaris+Sportsman'],
         category: 'quad',
         features: ['Allrad', 'Servolenkung', 'Seilwinde', 'Gepäckträger'],
         description: 'Neuwertiges Quad für Arbeit und Freizeit. Inklusive LOF-Zulassung.'
@@ -91,7 +91,7 @@ export const DEMO_CARS: Car[] = [
         powerUnit: 'PS',
         transmission: 'Schaltgetriebe',
         firstRegistration: '11/2021',
-        images: ['https://images.unsplash.com/photo-1517524008436-bbdb53951433?auto=format&fit=crop&q=80&w=800'],
+        images: ['https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Ford+Transit+Custom'],
         category: 'nutz',
         features: ['Klima', 'Tempomat', 'Schiebetür rechts', 'Laderaumschutz'],
         description: 'Gepflegter Transit Custom. Scheckheftgepflegt.'
@@ -107,7 +107,7 @@ export const DEMO_CARS: Car[] = [
         powerUnit: 'PS',
         transmission: 'Automatik',
         firstRegistration: '02/2022',
-        images: ['https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800'],
+        images: ['https://placehold.co/800x500/F3F3F3/545557?font=inter&text=Audi+A4+Avant'],
         category: 'pkw',
         features: ['Virtual Cockpit', 'Matrix LED', 'Bang & Olufsen', 'ACC'],
         description: 'Schöner A4 Avant in Manhattangrau. Sehr guter Zustand.'

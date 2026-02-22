@@ -27,43 +27,61 @@ import Footer from "../components/Footer.astro";
                 </div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-10 py-20">
-                <div class="max-w-3xl">
-                    <div class="flex items-center gap-3 mb-8">
+            <div
+                class="container mx-auto px-6 relative z-10 py-32 flex flex-col justify-end min-h-[90vh]"
+            >
+                <div class="max-w-4xl pb-12">
+                    <div class="flex items-center gap-3 mb-8 reveal">
                         <div class="w-12 h-1 bg-orange"></div>
                         <span
-                            class="text-orange font-black uppercase tracking-[0.3em] text-sm"
-                            >Qualität seit Generationen</span
+                            class="text-white/80 font-bold uppercase tracking-[0.4em] text-xs"
+                            >Innovation & Zuverlässigkeit</span
                         >
                     </div>
 
                     <h1
-                        class="text-5xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter uppercase"
+                        class="text-6xl md:text-8xl lg:text-[7rem] font-black mb-10 leading-[0.9] tracking-tighter uppercase reveal delay-100"
                     >
                         PREMIUM <br />
-                        <span class="text-orange">NUTZFAHRZEUGE</span>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-orange to-[#CC5833]"
+                            >FAHRZEUGE</span
+                        >
                     </h1>
 
                     <p
-                        class="text-xl md:text-2xl mb-12 text-gray-300 max-w-xl leading-relaxed"
+                        class="text-xl md:text-2xl mb-16 text-white/70 max-w-2xl leading-relaxed font-light reveal delay-200"
                     >
-                        Ihr spezialisierter Partner für Sprinter, Transporter
-                        und gepflegte PKW in Waldsassen. Entdecken Sie über 100
-                        Fahrzeuge vor Ort.
+                        Ihr Boutique-Partner für exzellente Sprinter,
+                        Transporter und handverlesene PKW. Präzision trifft auf
+                        Leidenschaft.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <div
+                        class="flex flex-col sm:flex-row items-center gap-6 reveal delay-300"
+                    >
                         <a
                             href="/fahrzeugbestand"
-                            class="w-full sm:w-auto px-10 py-5 bg-orange hover:bg-orange/90 text-white font-black rounded-xl transition-all transform hover:scale-105 shadow-xl shadow-orange/20 uppercase tracking-wider text-center"
+                            class="group relative overflow-hidden w-full sm:w-auto px-12 py-5 bg-white text-navy font-black rounded-[2rem] transition-all duration-700 transform hover:scale-[1.03] shadow-2xl hover:shadow-white/20 uppercase tracking-widest text-center text-sm"
                         >
-                            Fahrzeugbestand ansehen
+                            <div
+                                class="absolute inset-0 bg-orange translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] z-0"
+                            >
+                            </div>
+                            <span
+                                class="relative z-10 group-hover:text-white transition-colors duration-500"
+                                >Inventory durchsuchen</span
+                            >
                         </a>
                         <a
                             href="#kontakt"
-                            class="w-full sm:w-auto px-10 py-5 border-2 border-white hover:bg-white hover:text-navy text-white font-black rounded-xl transition-all uppercase tracking-wider text-center"
+                            class="group relative overflow-hidden w-full sm:w-auto px-12 py-5 border border-white/30 text-white font-bold rounded-[2rem] transition-all duration-700 transform hover:scale-[1.03] hover:border-white/0 uppercase tracking-widest text-center text-sm"
                         >
-                            Kontakt aufnehmen
+                            <div
+                                class="absolute inset-0 bg-white/10 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] z-0 backdrop-blur-md"
+                            >
+                            </div>
+                            <span class="relative z-10">Kontakt aufnehmen</span>
                         </a>
                     </div>
                 </div>
