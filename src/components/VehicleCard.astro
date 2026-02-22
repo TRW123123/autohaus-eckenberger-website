@@ -10,7 +10,9 @@ const { car } = Astro.props;
 
 <a
     href={`/fahrzeug/${car.id}`}
-    class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+    data-title={`${car.make} ${car.model}`}
+    data-category={car.category}
+    class="vehicle-card group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
 >
     <div class="relative aspect-[16/10] overflow-hidden">
         <img

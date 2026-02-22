@@ -26,44 +26,83 @@ import VehicleGrid from "../components/VehicleGrid.astro";
         </div>
 
         <div class="container mx-auto px-6">
-            <!-- Simple Filters Placeholder -->
+            <!-- Search & Filters -->
             <div
                 class="bg-white rounded-2xl p-6 shadow-xl mb-12 flex flex-wrap items-center gap-6 border border-gray-100"
             >
+                <div class="flex flex-col gap-2 flex-grow min-w-[300px]">
+                    <span
+                        class="text-[10px] font-black uppercase text-gray-400 tracking-widest"
+                        >Suche</span
+                    >
+                    <input
+                        type="text"
+                        id="vehicleSearch"
+                        placeholder="Modell, Marke oder Ausstattung suchen..."
+                        class="bg-gray-50 border-none rounded-lg font-bold text-navy py-2 px-4 focus:ring-2 focus:ring-orange transition-all outline-none"
+                    />
+                </div>
                 <div class="flex flex-col gap-2">
                     <span
                         class="text-[10px] font-black uppercase text-gray-400 tracking-widest"
                         >Kategorie</span
                     >
                     <select
+                        id="categoryFilter"
                         class="bg-gray-50 border-none rounded-lg font-bold text-navy py-2 px-4 focus:ring-2 focus:ring-orange transition-all outline-none"
                     >
-                        <option>Alle Fahrzeuge</option>
-                        <option>Nutzfahrzeuge</option>
-                        <option>PKW & SUVs</option>
-                        <option>Quads & UTVs</option>
+                        <option value="all">Alle Fahrzeuge</option>
+                        <option value="nutz">Nutzfahrzeuge</option>
+                        <option value="pkw">PKW & SUVs</option>
+                        <option value="quad">Quads & UTVs</option>
                     </select>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <span
-                        class="text-[10px] font-black uppercase text-gray-400 tracking-widest"
-                        >Sortierung</span
+                <div class="ml-auto hidden md:block">
+                    <span class="text-sm font-bold text-navy" id="resultCount"
+                        >102 Treffer</span
                     >
-                    <select
-                        class="bg-gray-50 border-none rounded-lg font-bold text-navy py-2 px-4 focus:ring-2 focus:ring-orange transition-all outline-none"
-                    >
-                        <option>Neueste zuerst</option>
-                        <option>Preis: Günstig zuerst</option>
-                        <option>Preis: Teuer zuerst</option>
-                        <option>km: Wenigste zuerst</option>
-                    </select>
-                </div>
-                <div class="ml-auto">
-                    <span class="text-sm font-bold text-navy">102 Treffer</span>
                 </div>
             </div>
 
             <VehicleGrid />
+
+            <script>
+                const searchInput = document.getElementById("vehicleSearch");
+                const categorySelect =
+                    document.getElementById("categoryFilter");
+                const resultCount = document.getElementById("resultCount");
+
+                function filterVehicles() {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const category = categorySelect.value;
+                    const cards = document.querySelectorAll(".vehicle-card");
+                    let visibleCount = 0;
+
+                    cards.forEach((card) => {
+                        const title = card
+                            .getAttribute("data-title")
+                            .toLowerCase();
+                        const cardCategory = card.getAttribute("data-category");
+
+                        const matchesSearch = title.includes(searchTerm);
+                        const matchesCategory =
+                            category === "all" || cardCategory === category;
+
+                        if (matchesSearch && matchesCategory) {
+                            card.style.display = "block";
+                            visibleCount++;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+
+                    if (resultCount)
+                        resultCount.textContent = `${visibleCount} Treffer`;
+                }
+
+                searchInput.addEventListener("input", filterVehicles);
+                categorySelect.addEventListener("change", filterVehicles);
+            </script>
 
             <!-- CTA Section -->
             <div

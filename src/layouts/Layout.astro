@@ -1,5 +1,5 @@
----
 import "../styles/global.css";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
 
 interface Props {
     title?: string;
@@ -29,8 +29,34 @@ const {
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
+        <style is:global>
+            .reveal {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+        <script>
+            const observerOptions = {
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        </script>
     </head>
     <body class="min-h-screen">
         <slot />
+        <WhatsAppButton />
     </body>
 </html>
