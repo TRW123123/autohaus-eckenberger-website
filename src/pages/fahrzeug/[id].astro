@@ -1,0 +1,243 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import {
+    getCars,
+    getCarById,
+    formatPrice,
+    formatMileage,
+} from "../../lib/inventory";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+    const cars = getCars();
+    return cars.map((car) => ({
+        params: { id: car.id },
+    }));
+}
+
+const { id } = Astro.params;
+const car = getCarById(id!);
+
+if (!car) {
+    return Astro.redirect("/404");
+}
+
+const specs = [
+    {
+        label: "Erstzulassung",
+        value: car.firstRegistration,
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>`,
+    },
+    {
+        label: "Kilometerstand",
+        value: formatMileage(car.mileage),
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 1.1.9 2 2 2h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>`,
+    },
+    {
+        label: "Kraftstoff",
+        value: car.fuel,
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22L15 22"/><path d="M4 9L15 9"/><path d="M14 22L14 11"/><path d="M15 5L15 22"/><path d="M19 12L22 15L19 18"/><path d="M18 11V19"/></svg>`,
+    },
+    {
+        label: "Leistung",
+        value: `${car.power} ${car.powerUnit}`,
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="m4.93 4.93 14.14 14.14"/><path d="M2 12h20"/><path d="m19.07 4.93-14.14 14.14"/></svg>`,
+    },
+    {
+        label: "Getriebe",
+        value: car.transmission,
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 7h18"/><path d="M3 17h18"/></svg>`,
+    },
+];
+---
+
+<Layout title={`${car.make} ${car.model} | Autohaus Eckenberger`}>
+    <Header />
+    <main class="bg-cream min-h-screen pb-24">
+        <div class="container mx-auto px-6 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-sm text-gray-500 mb-8">
+                <a href="/" class="hover:text-orange">Home</a>
+                <span>/</span>
+                <a href="/fahrzeugbestand" class="hover:text-orange"
+                    >Fahrzeugbestand</a
+                >
+                <span>/</span>
+                <span class="text-navy font-bold">{car.make} {car.model}</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Main Content (Gallery & Info) -->
+                <div class="lg:col-span-2 space-y-12">
+                    <!-- Gallery Placeholder -->
+                    <div
+                        class="relative aspect-video rounded-3xl overflow-hidden shadow-2xl bg-white border-4 border-white"
+                    >
+                        <img
+                            src={car.images[0]}
+                            alt={car.model}
+                            class="w-full h-full object-cover"
+                        />
+                        <div
+                            class="absolute bottom-6 right-6 px-4 py-2 bg-navy/80 backdrop-blur-md text-white rounded-full text-xs font-black uppercase tracking-wider"
+                        >
+                            1 / {car.images.length} Bilder
+                        </div>
+                    </div>
+
+                    <!-- Description & Features -->
+                    <div
+                        class="bg-white rounded-3xl p-10 shadow-xl border border-gray-100"
+                    >
+                        <h2
+                            class="text-3xl font-black text-navy uppercase tracking-tight mb-8"
+                        >
+                            Fahrzeugbeschreibung
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-10 text-lg">
+                            {car.description}
+                        </p>
+
+                        <h3
+                            class="text-xl font-black text-navy uppercase tracking-tight mb-6"
+                        >
+                            Ausstattungshighlights
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {
+                                car.features.map((feature) => (
+                                    <div class="flex items-center gap-3 py-3 px-4 bg-cream rounded-xl text-navy font-bold text-sm">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="3"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="text-orange"
+                                        >
+                                            <path d="M20 6 9 17l-5-5" />
+                                        </svg>
+                                        {feature}
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar (Price & Stats) -->
+                <div class="space-y-8">
+                    <div
+                        class="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 sticky top-32"
+                    >
+                        <div class="mb-8">
+                            <span
+                                class="text-orange font-black uppercase tracking-[0.2em] text-[10px] block mb-2"
+                                >Barpreis</span
+                            >
+                            <div class="text-4xl font-black text-navy">
+                                {formatPrice(car.price)}
+                            </div>
+                            <p class="text-gray-400 text-[10px] mt-1 italic">
+                                MwSt. ausweisbar (sofern zutreffend)
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 mb-10">
+                            {
+                                specs.map((spec) => (
+                                    <div class="flex items-center justify-between py-3 border-b border-gray-50">
+                                        <div class="flex items-center gap-3 text-gray-400">
+                                            <Fragment set:html={spec.icon} />
+                                            <span class="text-xs font-bold uppercase tracking-wider">
+                                                {spec.label}
+                                            </span>
+                                        </div>
+                                        <span class="text-sm font-black text-navy">
+                                            {spec.value}
+                                        </span>
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                        <div class="space-y-4">
+                            <a
+                                href={`tel:09632923090`}
+                                class="w-full py-5 bg-orange hover:bg-orange/90 text-white font-black rounded-2xl transition-all shadow-xl shadow-orange/20 flex items-center justify-center gap-3 uppercase tracking-wider"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    ><path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                    ></path></svg
+                                >
+                                Jetzt Anrufen
+                            </a>
+                            <a
+                                href="/kontakt"
+                                class="w-full py-5 bg-navy hover:bg-navy/90 text-white font-black rounded-2xl transition-all shadow-xl shadow-navy/20 flex items-center justify-center gap-3 uppercase tracking-wider"
+                            >
+                                Anfrage senden
+                            </a>
+                        </div>
+
+                        <div
+                            class="mt-8 flex items-center justify-center gap-4 py-4 border-2 border-dashed border-gray-100 rounded-2xl"
+                        >
+                            <div class="text-center">
+                                <div
+                                    class="text-[10px] font-black uppercase text-gray-400"
+                                >
+                                    Teilen
+                                </div>
+                                <div class="flex gap-2 mt-2">
+                                    <div
+                                        class="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center text-gray-400 hover:text-orange cursor-pointer transition-colors"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            ><path
+                                                d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"
+                                            ></path><polyline
+                                                points="16 6 12 2 8 6"
+                                            ></polyline><line
+                                                x1="12"
+                                                x2="12"
+                                                y1="2"
+                                                y2="15"></line></svg
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

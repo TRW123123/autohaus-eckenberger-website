@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import VehicleGrid from "../components/VehicleGrid.astro";
+---
+
+<Layout title="Fahrzeugbestand | Autohaus Eckenberger">
+    <Header />
+    <main class="bg-cream min-h-screen pb-24">
+        <div class="bg-navy py-16 text-white mb-16">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-1 bg-orange"></div>
+                    <span
+                        class="text-orange font-black uppercase tracking-[0.3em] text-[10px]"
+                        >Sofort Verfügbar</span
+                    >
+                </div>
+                <h1
+                    class="text-4xl md:text-6xl font-black uppercase tracking-tighter"
+                >
+                    Unser <span class="text-orange">Fahrzeugbestand</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <!-- Simple Filters Placeholder -->
+            <div
+                class="bg-white rounded-2xl p-6 shadow-xl mb-12 flex flex-wrap items-center gap-6 border border-gray-100"
+            >
+                <div class="flex flex-col gap-2">
+                    <span
+                        class="text-[10px] font-black uppercase text-gray-400 tracking-widest"
+                        >Kategorie</span
+                    >
+                    <select
+                        class="bg-gray-50 border-none rounded-lg font-bold text-navy py-2 px-4 focus:ring-2 focus:ring-orange transition-all outline-none"
+                    >
+                        <option>Alle Fahrzeuge</option>
+                        <option>Nutzfahrzeuge</option>
+                        <option>PKW & SUVs</option>
+                        <option>Quads & UTVs</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span
+                        class="text-[10px] font-black uppercase text-gray-400 tracking-widest"
+                        >Sortierung</span
+                    >
+                    <select
+                        class="bg-gray-50 border-none rounded-lg font-bold text-navy py-2 px-4 focus:ring-2 focus:ring-orange transition-all outline-none"
+                    >
+                        <option>Neueste zuerst</option>
+                        <option>Preis: Günstig zuerst</option>
+                        <option>Preis: Teuer zuerst</option>
+                        <option>km: Wenigste zuerst</option>
+                    </select>
+                </div>
+                <div class="ml-auto">
+                    <span class="text-sm font-bold text-navy">102 Treffer</span>
+                </div>
+            </div>
+
+            <VehicleGrid />
+
+            <!-- CTA Section -->
+            <div
+                class="mt-24 p-12 bg-white rounded-[3rem] shadow-2xl border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8"
+            >
+                <div class="max-w-xl text-center md:text-left">
+                    <h2
+                        class="text-3xl font-black text-navy uppercase tracking-tight mb-4"
+                    >
+                        Nicht das passende Fahrzeug dabei?
+                    </h2>
+                    <p class="text-gray-600">
+                        Wir haben ständig neue Fahrzeuge im Zulauf. Rufen Sie
+                        uns an oder teilen Sie uns Ihren Suchauftrag mit.
+                    </p>
+                </div>
+                <a
+                    href="/kontakt"
+                    class="px-10 py-5 bg-navy text-white font-bold rounded-2xl hover:bg-orange transition-all shadow-xl shadow-navy/20"
+                >
+                    Jetzt Anfragen
+                </a>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

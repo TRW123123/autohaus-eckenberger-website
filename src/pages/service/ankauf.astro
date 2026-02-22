@@ -1,0 +1,115 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Fahrzeugankauf | Autohaus Eckenberger">
+    <Header />
+    <main class="bg-cream min-h-screen pb-24">
+        <div class="bg-navy py-16 text-white mb-16">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-8 h-1 bg-orange"></div>
+                    <span
+                        class="text-orange font-black uppercase tracking-[0.3em] text-[10px]"
+                        >Schnell & Fair</span
+                    >
+                </div>
+                <h1
+                    class="text-4xl md:text-6xl font-black uppercase tracking-tighter"
+                >
+                    Fahrzeug <span class="text-orange">Ankauf</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div
+                class="bg-white rounded-[3rem] p-12 md:p-20 shadow-2xl border border-gray-100"
+            >
+                <h2
+                    class="text-3xl font-black text-navy uppercase tracking-tight mb-8"
+                >
+                    Fairer Preis für Ihr Altfahrzeug
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-12">
+                    Möchten Sie Ihr aktuelles Fahrzeug verkaufen oder in Zahlung
+                    geben? Wir unterbreiten Ihnen ein faires und marktgerechtes
+                    Angebot – unkompliziert und schnell.
+                </p>
+
+                <div
+                    class="bg-cream rounded-3xl p-10 mb-12 border border-gray-100 italic text-navy font-medium"
+                >
+                    "Wir kaufen alle Marken und Modelle – vom PKW bis zum
+                    schweren Nutzfahrzeug. Auch Unfallwagen oder Fahrzeuge mit
+                    hoher Laufleistung sind für uns interessant."
+                </div>
+
+                <div class="space-y-6">
+                    <h3
+                        class="text-xl font-black text-navy uppercase tracking-tight mb-4"
+                    >
+                        In 3 Schritten zum Verkauf:
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-50"
+                        >
+                            <div
+                                class="w-10 h-10 bg-orange/10 text-orange rounded-full flex items-center justify-center font-black mx-auto mb-4"
+                            >
+                                1
+                            </div>
+                            <p class="text-sm font-bold text-navy">
+                                Daten senden
+                            </p>
+                            <p class="text-xs text-gray-400 mt-2">
+                                Über unser Formular oder per WhatsApp.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-50"
+                        >
+                            <div
+                                class="w-10 h-10 bg-orange/10 text-orange rounded-full flex items-center justify-center font-black mx-auto mb-4"
+                            >
+                                2
+                            </div>
+                            <p class="text-sm font-bold text-navy">Bewertung</p>
+                            <p class="text-xs text-gray-400 mt-2">
+                                Wir prüfen Ihre Angaben zeitnah.
+                            </p>
+                        </div>
+                        <div
+                            class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-50"
+                        >
+                            <div
+                                class="w-10 h-10 bg-orange/10 text-orange rounded-full flex items-center justify-center font-black mx-auto mb-4"
+                            >
+                                3
+                            </div>
+                            <p class="text-sm font-bold text-navy">
+                                Auszahlung
+                            </p>
+                            <p class="text-xs text-gray-400 mt-2">
+                                Schnelle Abwicklung & Barankauf.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 flex justify-center">
+                    <a
+                        href="/kontakt?subject=ankauf"
+                        class="px-10 py-5 bg-orange hover:bg-navy text-white font-black rounded-2xl transition-all shadow-xl shadow-orange/20 uppercase tracking-wider"
+                    >
+                        Unverbindliches Angebot anfordern
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>
