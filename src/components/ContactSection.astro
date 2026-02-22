@@ -1,0 +1,101 @@
+---
+const contactInfo = [
+    {
+        label: "Adresse",
+        value: "Hundsbach 13c, 95652 Waldsassen",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    },
+    {
+        label: "Telefon",
+        value: "09632 - 923 090",
+        href: "tel:09632923090",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+    },
+    {
+        label: "E-Mail",
+        value: "e.eckenberger@googlemail.com",
+        href: "mailto:e.eckenberger@googlemail.com",
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+    },
+];
+---
+
+<section id="kontakt" class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <!-- Contact Details -->
+            <div>
+                <h2
+                    class="text-4xl md:text-5xl font-black text-navy mb-8 uppercase tracking-tighter"
+                >
+                    Nehmen Sie <span class="text-orange">Kontakt</span> auf
+                </h2>
+                <p class="text-gray-600 text-lg mb-12">
+                    Haben Sie Fragen zu einem Fahrzeug oder möchten Sie eine
+                    Probefahrt vereinbaren? Unser Team berät Sie gerne – auch
+                    mehrsprachig.
+                </p>
+
+                <div class="space-y-8 mb-12">
+                    {
+                        contactInfo.map((item) => (
+                            <div class="flex items-start gap-6">
+                                <div class="w-12 h-12 rounded-xl bg-orange flex items-center justify-center text-white shrink-0 shadow-lg shadow-orange/20">
+                                    <Fragment set:html={item.icon} />
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-black text-orange uppercase tracking-widest mb-1">
+                                        {item.label}
+                                    </p>
+                                    {item.href ? (
+                                        <a
+                                            href={item.href}
+                                            class="text-xl font-bold text-navy hover:text-orange transition-colors"
+                                        >
+                                            {item.value}
+                                        </a>
+                                    ) : (
+                                        <p class="text-xl font-bold text-navy">
+                                            {item.value}
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div
+                    class="p-8 bg-cream rounded-3xl border border-gray-100 italic text-gray-600 text-sm leading-relaxed"
+                >
+                    "Wir legen Wert auf persönliche Beratung und transparente
+                    Abwicklung. Besuchen Sie uns in Waldsassen und überzeugen
+                    Sie sich vor Ort."
+                </div>
+            </div>
+
+            <!-- Map Overlay -->
+            <div class="relative group">
+                <div
+                    class="absolute -inset-4 bg-orange/10 rounded-[2.5rem] blur-2xl transition-all group-hover:bg-orange/20"
+                >
+                </div>
+                <div
+                    class="relative aspect-square md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white"
+                >
+                    <!-- Real Google Maps Embed Placeholder (Waldsassen) -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2551.488661644782!2d12.3023!3d50.0028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a097457d9f78d9%3A0x6a1a1a1a1a1a1a1a!2sHundsbach%2013c%2C%2095652%20Waldsassen!5e0!3m2!1sde!2sde!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="grayscale contrast-125 brightness-90 group-hover:grayscale-0 transition-all duration-700"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

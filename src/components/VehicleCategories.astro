@@ -1,0 +1,75 @@
+---
+const categories = [
+  {
+    name: 'Nutzfahrzeuge',
+    count: '60+',
+    description: 'Sprinter, Transporter & LKW für Ihr Business.',
+    image: 'https://images.unsplash.com/photo-1519003300449-424ad040507b?auto=format&fit=crop&q=80&w=800',
+    href: '/fahrzeugbestand?cat=nutz'
+  },
+  {
+    name: 'PKW & SUVs',
+    count: '30+',
+    description: 'Hochwertige Gebrauchtwagen aller Marken.',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800',
+    href: '/fahrzeugbestand?cat=pkw'
+  },
+  {
+    name: 'Quads & UTVs',
+    count: '10+',
+    description: 'Spezialfahrzeuge für Freizeit & Arbeit.',
+    image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800',
+    href: '/fahrzeugbestand?cat=quad'
+  }
+];
+---
+
+<section class="py-24 bg-cream">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+      <div class="max-w-xl">
+        <h2 class="text-4xl md:text-5xl font-black text-navy mb-6 uppercase tracking-tighter">
+          Unsere <span class="text-orange">Fahrzeugwelten</span>
+        </h2>
+        <div class="w-24 h-2 bg-orange mb-8"></div>
+        <p class="text-gray-600 text-lg">
+          Entdecken Sie unsere spezialisierte Auswahl. Wir bieten für jeden Bedarf das passende Fahrzeug – technisch einwandfrei und optisch aufbereitet.
+        </p>
+      </div>
+      <a href="/fahrzeugbestand" class="mt-8 md:mt-0 px-8 py-4 bg-navy text-white font-bold rounded-lg hover:bg-navy/90 transition-all flex items-center gap-2 group">
+        Gesamter Bestand
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {categories.map((cat) => (
+        <a href={cat.href} class="group relative aspect-[3/4] overflow-hidden rounded-3xl shadow-xl">
+          <!-- Background Image -->
+          <img 
+            src={cat.image} 
+            alt={cat.name} 
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <!-- Overlays -->
+          <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+          
+          <!-- Content -->
+          <div class="absolute inset-0 p-10 flex flex-col justify-end">
+            <span class="inline-block px-3 py-1 bg-orange text-white text-[10px] font-black rounded-full uppercase mb-4 w-fit">
+              {cat.count} Fahrzeuge
+            </span>
+            <h3 class="text-3xl font-black text-white mb-3 uppercase tracking-tight">{cat.name}</h3>
+            <p class="text-gray-300 text-sm leading-relaxed mb-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+              {cat.description}
+            </p>
+            <div class="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-widest">
+              Ansehen
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
