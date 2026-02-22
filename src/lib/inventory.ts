@@ -28,9 +28,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: 'Neu',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
+            '/images/inventory/fiat_ducato_maxi.png',
+            '/images/inventory/fiat_ducato_maxi.png',
+            '/images/inventory/fiat_ducato_maxi.png'
         ],
         category: 'nutz',
         features: ['Klimaanlage', 'Rückfahrkamera', 'Tempomat', 'Trennwand'],
@@ -48,9 +48,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '09/2021',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
+            '/images/inventory/peugeot_boxer.png',
+            '/images/inventory/peugeot_boxer.png',
+            '/images/inventory/peugeot_boxer.png'
         ],
         category: 'nutz',
         features: ['Einparkhilfe', 'Sitzheizung', 'Bluetooth', 'Anhängerkupplung'],
@@ -68,9 +68,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '05/2021',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
+            '/images/inventory/citroen_jumper.png',
+            '/images/inventory/citroen_jumper.png',
+            '/images/inventory/citroen_jumper.png'
         ],
         category: 'nutz',
         features: ['Radio/CD', 'Zentralverriegelung', 'Servolenkung'],
@@ -88,9 +88,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: 'Neu',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
+            '/images/inventory/mercedes_sprinter.png',
+            '/images/inventory/mercedes_sprinter.png',
+            '/images/inventory/mercedes_sprinter.png'
         ],
         category: 'nutz',
         features: ['MBUX', 'Multifunktionslenkrad', 'Seitenwind-Assistent'],
@@ -108,9 +108,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '04/2021',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
+            '/images/inventory/vw_transporter.png',
+            '/images/inventory/vw_transporter.png',
+            '/images/inventory/vw_transporter.png'
         ],
         category: 'nutz',
         features: ['Klima', 'Trennwand mit Fenster', 'Holzboden'],
@@ -128,9 +128,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Automatik',
         firstRegistration: 'Neu',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/800px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg'
+            '/images/inventory/fiat_ducato_doppelkabine.png',
+            '/images/inventory/fiat_ducato_doppelkabine.png',
+            '/images/inventory/fiat_ducato_doppelkabine.png'
         ],
         category: 'nutz',
         features: ['Automatik', 'Navi', '7 Sitze', 'Pritsche'],
@@ -148,9 +148,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Schaltgetriebe',
         firstRegistration: '10/2024',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/800px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/800px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/800px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg'
+            '/images/inventory/audi_a4.png',
+            '/images/inventory/audi_a4.png',
+            '/images/inventory/audi_a4.png'
         ],
         category: 'pkw',
         features: ['Virtual Cockpit', 'Matrix LED', 'Bang & Olufsen'],
@@ -168,9 +168,9 @@ export const DEMO_CARS: Car[] = [
         transmission: 'Automatik',
         firstRegistration: '05/2023',
         images: [
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/800px-Mercedes-Benz_G_350_d_%28W_463%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/800px-Mercedes-Benz_G_350_d_%28W_463%29.jpg',
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/800px-Mercedes-Benz_G_350_d_%28W_463%29.jpg'
+            '/images/inventory/polaris_quad.png',
+            '/images/inventory/polaris_quad.png',
+            '/images/inventory/polaris_quad.png'
         ],
         category: 'quad',
         features: ['Allrad', 'Servolenkung', 'Seilwinde', 'Gepäckträger'],
