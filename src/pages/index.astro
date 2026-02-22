@@ -12,19 +12,66 @@ import Footer from "../components/Footer.astro";
     <main>
         <!-- Hero Section -->
         <section
-            class="relative min-h-[90vh] flex items-center bg-navy text-white overflow-hidden"
+            class="relative min-h-[90vh] flex items-center bg-navy text-white overflow-hidden hero-section"
         >
-            <div class="absolute inset-0 z-0">
-                <!-- Background Image (Sprinter/Nutzfahrzeug Fokus) -->
-                <img
-                    src="https://images.unsplash.com/photo-1600320844678-430930335099?auto=format&fit=crop&q=80&w=1920"
-                    alt="Sprinter Nutzfahrzeug"
-                    class="w-full h-full object-cover opacity-40 grayscale"
-                />
+            <div class="absolute inset-0 z-0 hero-carousel-container">
+                <!-- Slide 1: Premium Sprinter -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-r from-navy via-navy/60 to-transparent"
+                    class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out"
                 >
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg/1200px-Mercedes-Benz_Sprinter_313_CDI_%28W_906%29.jpg"
+                        alt="Sprinter Nutzfahrzeug"
+                        class="w-full h-full object-cover scale-105 transition-transform duration-[10000ms] ease-out slide-img"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"
+                    >
+                    </div>
                 </div>
+
+                <!-- Slide 2: Sports Car / PKW -->
+                <div
+                    class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+                >
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg/1200px-Porsche_Panamera_4S_Diesel_-_Mondscheinblau.jpg"
+                        alt="Porsche Panamera"
+                        class="w-full h-full object-cover scale-100 transition-transform duration-[10000ms] ease-out slide-img"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"
+                    >
+                    </div>
+                </div>
+
+                <!-- Slide 3: Robust Offroader -->
+                <div
+                    class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out"
+                >
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mercedes-Benz_G_350_d_%28W_463%29.jpg/1200px-Mercedes-Benz_G_350_d_%28W_463%29.jpg"
+                        alt="G-Klasse Offroad"
+                        class="w-full h-full object-cover scale-100 transition-transform duration-[10000ms] ease-out slide-img"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"
+                    >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Progress Indicators -->
+            <div class="absolute bottom-10 right-10 flex gap-3 z-20">
+                <button
+                    class="hero-dot w-12 h-1.5 rounded-full bg-orange transition-all duration-300"
+                    aria-label="Slide 1"></button>
+                <button
+                    class="hero-dot w-6 h-1.5 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300"
+                    aria-label="Slide 2"></button>
+                <button
+                    class="hero-dot w-6 h-1.5 rounded-full bg-white/30 hover:bg-white/60 transition-all duration-300"
+                    aria-label="Slide 3"></button>
             </div>
 
             <div
@@ -69,9 +116,25 @@ import Footer from "../components/Footer.astro";
                             >
                             </div>
                             <span
-                                class="relative z-10 group-hover:text-white transition-colors duration-500"
-                                >Inventory durchsuchen</span
+                                class="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-3 justify-center"
                             >
+                                Bestand ansehen
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="transition-transform group-hover:translate-x-1"
+                                    ><line x1="5" y1="12" x2="19" y2="12"
+                                    ></line><polyline points="12 5 19 12 12 19"
+                                    ></polyline></svg
+                                >
+                            </span>
                         </a>
                         <a
                             href="#kontakt"
@@ -89,7 +152,7 @@ import Footer from "../components/Footer.astro";
 
             <!-- Scroll Indicator -->
             <div
-                class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block animate-bounce"
+                class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block animate-bounce z-20"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -107,6 +170,81 @@ import Footer from "../components/Footer.astro";
                 >
             </div>
         </section>
+
+        <script>
+            // Simple robust interval-based carousel for Hero
+            function initHeroCarousel() {
+                const slides = document.querySelectorAll(".hero-slide");
+                const dots = document.querySelectorAll(".hero-dot");
+                if (slides.length === 0) return;
+
+                let currentSlide = 0;
+                let interval;
+
+                const showSlide = (index) => {
+                    // Reset all
+                    slides.forEach((slide, i) => {
+                        slide.classList.remove("opacity-100");
+                        slide.classList.add("opacity-0");
+                        const img = slide.querySelector(".slide-img");
+                        if (img) img.classList.remove("scale-105");
+                        if (img) img.classList.add("scale-100");
+
+                        // Dots
+                        if (dots[i]) {
+                            dots[i].classList.remove("w-12", "bg-orange");
+                            dots[i].classList.add("w-6", "bg-white/30");
+                        }
+                    });
+
+                    // Activate target
+                    slides[index].classList.remove("opacity-0");
+                    slides[index].classList.add("opacity-100");
+                    const activeImg = slides[index].querySelector(".slide-img");
+
+                    // Trigger reflow to restart CSS scale animation
+                    if (activeImg) {
+                        void activeImg.offsetWidth;
+                        activeImg.classList.remove("scale-100");
+                        activeImg.classList.add("scale-105");
+                    }
+
+                    if (dots[index]) {
+                        dots[index].classList.remove("w-6", "bg-white/30");
+                        dots[index].classList.add("w-12", "bg-orange");
+                    }
+                    currentSlide = index;
+                };
+
+                const nextSlide = () => {
+                    let next = (currentSlide + 1) % slides.length;
+                    showSlide(next);
+                };
+
+                const startCarousel = () => {
+                    if (interval) clearInterval(interval);
+                    interval = setInterval(nextSlide, 7000); // Change image every 7s
+                };
+
+                // Add dot click listeners
+                dots.forEach((dot, index) => {
+                    dot.addEventListener("click", () => {
+                        showSlide(index);
+                        startCarousel(); // reset timer
+                    });
+                });
+
+                // Init
+                setTimeout(() => {
+                    showSlide(0);
+                }, 100);
+                startCarousel();
+            }
+
+            // Run on load and View Transitions
+            initHeroCarousel();
+            document.addEventListener("astro:page-load", initHeroCarousel);
+        </script>
 
         <TrustFeatures />
         <VehicleCategories />
